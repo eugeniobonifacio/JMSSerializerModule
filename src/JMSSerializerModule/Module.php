@@ -29,10 +29,7 @@ use JMSSerializerModule\Options\Handlers;
 use JMSSerializerModule\Options\Metadata;
 use JMSSerializerModule\Options\PropertyNaming;
 use JMSSerializerModule\Options\Visitors;
-use JMSSerializerModule\Service\CamelCaseNamingStrategyFactory;
-use JMSSerializerModule\Service\DateTimeHandlerFactory;
 use JMSSerializerModule\Service\EventDispatcherFactory;
-use JMSSerializerModule\Service\FileLocatorFactory;
 use JMSSerializerModule\Service\HandlerRegistryFactory;
 use JMSSerializerModule\Service\MetadataCacheFactory;
 use JMSSerializerModule\Service\MetadataDriverFactory;
@@ -40,11 +37,10 @@ use JMSSerializerModule\View\Serializer;
 use Metadata\Driver\DriverChain;
 use Metadata\Driver\FileLocator;
 use Metadata\MetadataFactory;
-use Zend\Di\ServiceLocator;
 use Zend\Loader\AutoloaderFactory;
+use Zend\Loader\StandardAutoloader;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
-use Zend\Loader\StandardAutoloader;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
 use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
 use Zend\ServiceManager\ServiceManager;
@@ -184,7 +180,7 @@ class Module implements
                     return $vistor;
                 },
                 'jms_serializer.json_deserialization_visitor' => function (ServiceManager $sm) {
-                    return new JsonDeserializationVisitor($sm->get('jms_serializer.naming_strategy'), $sm->get('jms_serializer.object_constructor'));
+                    return new JsonDeserializationVisitor($sm->get('jms_serializer.naming_strategy')); //, $sm->get('jms_serializer.object_constructor'));
                 },
                 'jms_serializer.xml_serialization_visitor' => function(ServiceManager $sm) {
                     return new XmlSerializationVisitor($sm->get('jms_serializer.naming_strategy'));
@@ -194,7 +190,7 @@ class Module implements
                     $options = new Visitors($options['jms_serializer']['visitors']);
 
                     $xmlOptions = $options->getXml();
-                    $visitor = new XmlDeserializationVisitor($sm->get('jms_serializer.naming_strategy'), $sm->get('jms_serializer.object_constructor'));
+                    $visitor = new XmlDeserializationVisitor($sm->get('jms_serializer.naming_strategy')); //, $sm->get('jms_serializer.object_constructor'));
                     $visitor->setDoctypeWhitelist($xmlOptions['doctype_whitelist']);
 
                     return $visitor;
