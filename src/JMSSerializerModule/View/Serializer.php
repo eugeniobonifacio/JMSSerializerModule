@@ -2,7 +2,7 @@
 
 namespace JMSSerializerModule\View;
 
-use Zend\Form\View\Helper\AbstractHelper;
+use Laminas\Form\View\Helper\AbstractHelper;
 use JMS\Serializer\Serializer as BaseSerializer;
 use JMS\Serializer\SerializationContext;
 

@@ -8,9 +8,9 @@ use InvalidArgumentException;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\VisitorInterface;
 use PhpCollection\Map;
-use Zend\ServiceManager\Exception\ServiceNotCreatedException;
-use Zend\ServiceManager\Exception\ServiceNotFoundException;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
+use Laminas\ServiceManager\Exception\ServiceNotFoundException;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 /**
  * @author Martin Parsiegla <martin.parsiegla@gmail.com>
@@ -46,7 +46,7 @@ class SerializerFactory extends AbstractFactory
 
 
     /**
-     * @param \Zend\ServiceManager\ServiceLocatorInterface $sl
+     * @param \Laminas\ServiceManager\ServiceLocatorInterface $sl
      * @param array                                        $array
      *
      * @return \PhpCollection\Map

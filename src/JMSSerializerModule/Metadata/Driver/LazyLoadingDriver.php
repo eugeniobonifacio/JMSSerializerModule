@@ -3,7 +3,7 @@
 namespace JMSSerializerModule\Metadata\Driver;
 
 use Metadata\Driver\DriverInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 /**
  * @author Martin Parsiegla <martin.parsiegla@gmail.com>

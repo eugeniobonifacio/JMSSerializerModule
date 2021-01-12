@@ -4,8 +4,8 @@
 namespace JMSSerializerModule\Service;
 
 use RuntimeException;
-use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 /**
  * Base ServiceManager factory to be extended
@@ -17,7 +17,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 abstract class AbstractFactory implements FactoryInterface
 {
     /**
-     * @var \Zend\Stdlib\AbstractOptions
+     * @var \Laminas\Stdlib\AbstractOptions
      */
     protected $options;
 
@@ -26,7 +26,7 @@ abstract class AbstractFactory implements FactoryInterface
      *
      * @param  ServiceLocatorInterface      $sl
      * @param  string                       $key
-     * @return \Zend\Stdlib\AbstractOptions
+     * @return \Laminas\Stdlib\AbstractOptions
      * @throws \RuntimeException
      */
     public function getOptions(ServiceLocatorInterface $sl, $key)

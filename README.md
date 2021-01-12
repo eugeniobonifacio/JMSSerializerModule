@@ -1,7 +1,9 @@
 JMSSerializerModule
 ===================
 
-Zend Framework2 integration for the [jms serializer library](https://github.com/schmittjoh/serializer)
+Laminas integration for the [jms serializer library](https://github.com/schmittjoh/serializer)
+
+Use v3 for Zend Framework compatibility
 
 Documentation
 -------------

@@ -19,7 +19,7 @@
 
 namespace JMSSerializerModule\Options;
 
-use Zend\Stdlib\AbstractOptions;
+use Laminas\Stdlib\AbstractOptions;
 
 /**
  * Property naming options

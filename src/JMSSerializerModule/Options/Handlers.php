@@ -2,7 +2,7 @@
 
 namespace JMSSerializerModule\Options;
 
-use Zend\Stdlib\AbstractOptions;
+use Laminas\Stdlib\AbstractOptions;
 
 /**
  * HandlerRegistry options
