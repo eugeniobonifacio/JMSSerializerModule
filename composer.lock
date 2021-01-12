@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e76a5bf45c6c3af5eef5a4bd81076b7",
+    "content-hash": "e9220e21c4212b5a1e8df0cec712bb24",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -2359,81 +2359,6 @@
             "time": "2020-10-05T22:03:56+00:00"
         },
         {
-            "name": "laminas/laminas-code",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laminas/laminas-code.git",
-                "reference": "889ba6f34788eee250b5e8f895ca87dc0d685da2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/889ba6f34788eee250b5e8f895ca87dc0d685da2",
-                "reference": "889ba6f34788eee250b5e8f895ca87dc0d685da2",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-eventmanager": "^2.6 || ^3.0",
-                "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^7.1"
-            },
-            "conflict": {
-                "phpspec/prophecy": "<1.9.0"
-            },
-            "replace": {
-                "zendframework/zend-code": "^3.4.1"
-            },
-            "require-dev": {
-                "doctrine/annotations": "^1.7",
-                "ext-phar": "*",
-                "laminas/laminas-coding-standard": "^1.0",
-                "laminas/laminas-stdlib": "^2.7 || ^3.0",
-                "phpunit/phpunit": "^7.5.16 || ^8.4"
-            },
-            "suggest": {
-                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
-                "laminas/laminas-stdlib": "Laminas\\Stdlib component"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4.x-dev",
-                    "dev-develop": "3.5.x-dev",
-                    "dev-dev-4.0": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laminas\\Code\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Extensions to the PHP Reflection API, static code scanning, and code generation",
-            "homepage": "https://laminas.dev",
-            "keywords": [
-                "code",
-                "laminas"
-            ],
-            "support": {
-                "chat": "https://laminas.dev/chat",
-                "docs": "https://docs.laminas.dev/laminas-code/",
-                "forum": "https://discourse.laminas.dev",
-                "issues": "https://github.com/laminas/laminas-code/issues",
-                "rss": "https://github.com/laminas/laminas-code/releases.atom",
-                "source": "https://github.com/laminas/laminas-code"
-            },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "time": "2020-04-15T19:19:51+00:00"
-        },
-        {
             "name": "laminas/laminas-config",
             "version": "3.3.0",
             "source": {
@@ -2507,37 +2432,47 @@
         },
         {
             "name": "laminas/laminas-di",
-            "version": "2.6.1",
+            "version": "3.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-di.git",
-                "reference": "239b22408a1f8eacda6fc2b838b5065c4cf1d88e"
+                "reference": "d9b3ef9d56eab57b4040a759e4a349d5b730cede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-di/zipball/239b22408a1f8eacda6fc2b838b5065c4cf1d88e",
-                "reference": "239b22408a1f8eacda6fc2b838b5065c4cf1d88e",
+                "url": "https://api.github.com/repos/laminas/laminas-di/zipball/d9b3ef9d56eab57b4040a759e4a349d5b730cede",
+                "reference": "d9b3ef9d56eab57b4040a759e4a349d5b730cede",
                 "shasum": ""
             },
             "require": {
-                "container-interop/container-interop": "^1.1",
-                "laminas/laminas-code": "^2.6 || ^3.0",
                 "laminas/laminas-stdlib": "^2.7 || ^3.0",
                 "laminas/laminas-zendframework-bridge": "^0.4.5 || ^1.0",
-                "php": "^5.5 || ^7.0"
+                "php": "^7.1",
+                "psr/container": "^1.0",
+                "psr/log": "^1.0"
+            },
+            "conflict": {
+                "laminas/laminas-servicemanager-di": "*",
+                "phpspec/prophecy": "<1.9.0"
             },
             "replace": {
-                "zendframework/zend-di": "self.version"
+                "zendframework/zend-di": "^3.1.2"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0"
+                "container-interop/container-interop": "^1.2.0",
+                "laminas/laminas-coding-standard": "~1.0.0",
+                "laminas/laminas-servicemanager": "^3.0",
+                "mikey179/vfsstream": "^1.6.7",
+                "phpunit/phpunit": "^7.5.18 || ^8.5"
+            },
+            "suggest": {
+                "laminas/laminas-servicemanager": "An IoC container without auto wiring capabilities"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.6-dev",
-                    "dev-develop": "2.7-dev"
+                "laminas": {
+                    "component": "Laminas\\Di",
+                    "config-provider": "Laminas\\Di\\ConfigProvider"
                 }
             },
             "autoload": {
@@ -2549,8 +2484,10 @@
             "license": [
                 "BSD-3-Clause"
             ],
+            "description": "Automated dependency injection for PSR-11 containers",
             "homepage": "https://laminas.dev",
             "keywords": [
+                "PSR-11",
                 "di",
                 "laminas"
             ],
@@ -2562,7 +2499,13 @@
                 "rss": "https://github.com/laminas/laminas-di/releases.atom",
                 "source": "https://github.com/laminas/laminas-di"
             },
-            "time": "2019-12-31T15:17:33+00:00"
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2020-09-16T08:06:19+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -4199,6 +4142,57 @@
                 "source": "https://github.com/php-fig/container/tree/master"
             },
             "time": "2020-10-13T07:07:53+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "dd738d0b4491f32725492cf345f6b501f5922fec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/dd738d0b4491f32725492cf345f6b501f5922fec",
+                "reference": "dd738d0b4491f32725492cf345f6b501f5922fec",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/master"
+            },
+            "time": "2020-09-18T06:44:51+00:00"
         },
         {
             "name": "psr/simple-cache",

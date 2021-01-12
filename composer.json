@@ -32,7 +32,7 @@
     "laminas/laminas-servicemanager": "^3",
     "doctrine/doctrine-module": ">=0.5.1",
     "jms/serializer": "^1.0",
-    "laminas/laminas-di": "^2.6"
+    "laminas/laminas-di": "^3"
   },
   "require-dev": {
     "laminas/laminas-developer-tools": "*"
